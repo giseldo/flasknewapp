@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/8b88c918-8eaa-47e6-be4f-27f68c7e7d63/resourceGroups/giseldo.neo_rg_6491/providers/Microsoft.Web/sites/black-hill-6067b3e553aa41958073590eb1f76e4b",
-    "appService.deploySubpath": "."
-}

@@ -1,25 +1,20 @@
-import os
-from flask import (Flask, redirect, render_template, request,
-                   send_from_directory, url_for)
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-  return render_template('login.html')
+def hello():
+    return "ola mundo"
 
-@app.route('/login', methods=['GET', 'POST']) 
-def login(): 
-    return render_template('home.html') 
+@app.route('/ola')
+def ola():
+    return "ola mundo novo"
 
-@app.route('/submit_details', methods=['GET', 'POST']) 
-def submit_details(): 
-    return redirect(url_for('index')) 
+@app.route('/novo')
+def novo():
+    return "ola mundo novo"
 
-@app.route('/contacts', methods=['GET']) 
-def contacts(): 
-    contacts = "" 
-    return render_template('contacts.html', contacts=contacts) 
 
-if __name__ == '__main__':
-   app.run()
+@app.route('/<name>')
+def acao(name):
+    return f"ola mundo novo{name}"

@@ -1,4 +1,5 @@
 from flask import Flask
+from markupsafe import escape
 
 app = Flask(__name__)
 
@@ -17,4 +18,7 @@ def novo():
 
 @app.route('/<name>')
 def acao(name):
-    return f"ola mundo novo{name}"
+    return f"ola mundo novo{escape(name)}"
+
+if __name__ == '__main__':
+   app.run()
